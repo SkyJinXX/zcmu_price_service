@@ -71,10 +71,10 @@
     height: 35px;
     color: #1874CD;
     background-color: transparent;
-    transition-duration: 0.3s;
-    -moz-transition-duration: 0.3s; /* Firefox 4 */
-    -webkit-transition-duration: 0.3s; /* Safari 和 Chrome */
-    -o-transition-duration: 0.3s; /* Opera */
+    transition-duration: 0.5s;
+    -moz-transition-duration: 0.5s; /* Firefox 4 */
+    -webkit-transition-duration: 0.5s; /* Safari 和 Chrome */
+    -o-transition-duration: 0.5s; /* Opera */
 }
 
 .nav_button:hover{
