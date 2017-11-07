@@ -206,8 +206,12 @@
 }
 
 #footer{
-	width: 80%;
+	width: 100%;
 	height: 100px;
 	margin: auto;
 	background-color: cornflowerblue;
+}
+
+#footer_content{
+
 }

@@ -94,6 +94,15 @@ namespace zcmu_price_service {
         protected global::System.Web.UI.WebControls.Label Label2;
         
         /// <summary>
+        /// Label3 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Label3;
+        
+        /// <summary>
         /// messageAnnouncementGridView 控件。
         /// </summary>
         /// <remarks>
@@ -101,6 +110,15 @@ namespace zcmu_price_service {
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
         protected global::System.Web.UI.WebControls.GridView messageAnnouncementGridView;
+        
+        /// <summary>
+        /// Label4 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Label4;
         
         /// <summary>
         /// policiesAndRegulationsGridView 控件。
@@ -112,6 +130,15 @@ namespace zcmu_price_service {
         protected global::System.Web.UI.WebControls.GridView policiesAndRegulationsGridView;
         
         /// <summary>
+        /// Label5 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Label5;
+        
+        /// <summary>
         /// chargesPublicityGridView 控件。
         /// </summary>
         /// <remarks>
@@ -119,6 +146,15 @@ namespace zcmu_price_service {
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
         protected global::System.Web.UI.WebControls.GridView chargesPublicityGridView;
+        
+        /// <summary>
+        /// Label6 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Label6;
         
         /// <summary>
         /// creditSystemRulesAndPublicityGridView 控件。

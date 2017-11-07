@@ -91,26 +91,34 @@
 				</div>
 			</div>
 			<div id="main">
-				<div class="title">信息公告</div>
+				<div class="title">
+                    <asp:Label ID="Label3" runat="server" Text="信息公告" Font-Size="Medium"></asp:Label></div>
 				<div class="content">
                     <asp:GridView ID="messageAnnouncementGridView" runat="server"></asp:GridView>
 				</div>
-				<div class="title">政策法规</div>
+				<div class="title">
+                    <asp:Label ID="Label4" runat="server" Text="政策法规" Font-Size="Medium"></asp:Label></div>
 				<div class="content">
                     <asp:GridView ID="policiesAndRegulationsGridView" runat="server"></asp:GridView>
 				</div>
-				<div class="title">收费项目</div>
+				<div class="title">
+                    <asp:Label ID="Label5" runat="server" Text="收费项目" Font-Size="Medium"></asp:Label></div>
 				<div class="content">
                     <asp:GridView ID="chargesPublicityGridView" runat="server"></asp:GridView>
 				</div>
-				<div class="title">学分制规定和公示</div>
+				<div class="title">
+                    <asp:Label ID="Label6" runat="server" Text="学分制规定和公示" Font-Size="Medium"></asp:Label></div>
 				<div class="content">
                     <asp:GridView ID="creditSystemRulesAndPublicityGridView" runat="server"></asp:GridView>
 				</div>
 			</div>
 			<div class="clear"></div>
 		</div>
-		<div id="footer"></div>
+		<div id="footer">
+            <div id="footer_content">
+
+            </div>
+		</div>
     </form>
 </body>
 </html>
