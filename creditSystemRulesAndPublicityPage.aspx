@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="index.aspx.cs" Inherits="zcmu_price_service.index" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="creditSystemRulesAndPublicityPage.aspx.cs" Inherits="creditSystemRulesAndPublicity" %>
 
 <!DOCTYPE html>
 
@@ -6,42 +6,42 @@
 <head runat="server">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <title></title>
-    <link href="css/index.css" type="text/css" rel="stylesheet" />
+    <link href="css/creditSystemRulesAndPublicity.css" type="text/css" rel="stylesheet" />
     <link href="css/userpage_header_footer.css" type="text/css" rel="stylesheet" />
 </head>
 <body>
     <form id="form1" runat="server">
-        <div id="top"></div>
+    <div id="top"></div>
 		<div id="nav">
 			<ul>
 				<li>
                     <a>
-                        <asp:Button ID="homePage" CssClass="nav_button" runat="server" Text="首页" />
+                        <asp:Button ID="homePage" CssClass="nav_button" runat="server" Text="首页" OnClick="homePage_Click"/>
 					</a>
 				</li>
 				<li>
 					<a>
-                        <asp:Button ID="messageAnnouncement" CssClass="nav_button" runat="server" Text="信息公告" />
+                        <asp:Button ID="message_announcement" CssClass="nav_button" runat="server" Text="信息公告" OnClick="message_announcement_Click"/>
 					</a>
 				</li>
 				<li>
                     <a>
-                        <asp:Button ID="policiesAndRegulations" CssClass="nav_button" runat="server" Text="政策法规" />
+                        <asp:Button ID="policies_and_regulations" CssClass="nav_button" runat="server" Text="政策法规" OnClick="policies_and_regulations_Click" />
                     </a>
 				</li>
 				<li>
 					<a>
-                        <asp:Button ID="chargesPublicity" CssClass="nav_button" runat="server" Text="收费项目公示" />
+                        <asp:Button ID="charges_publicity" CssClass="nav_button" runat="server" Text="收费项目公示" OnClick="charges_publicity_Click" />
 					</a>
 				</li>
 				<li>
 					<a>
-                        <asp:Button ID="creditSystemRulesAndPublicity" CssClass="nav_button" runat="server" Text="学分制规定和公示" />
+                        <asp:Button ID="credit_system_rules_and_publicity" CssClass="nav_button" runat="server" Text="学分制规定和公示" OnClick="credit_system_rules_and_publicity_Click" />
 					</a>
 				</li>
 				<li>
 					<a>
-                        <asp:Button ID="backstageManagement" CssClass="nav_button" runat="server" Text="后台管理" />
+                        <asp:Button ID="backstage_management" CssClass="nav_button" runat="server" Text="后台管理" OnClick="backstage_management_Click" />
 					</a>
 				</li>
 			</ul>
@@ -91,26 +91,7 @@
 				</div>
 			</div>
 			<div id="main">
-				<div class="title">
-                    <asp:Label ID="Label3" runat="server" Text="信息公告" Font-Size="Medium"></asp:Label></div>
-				<div class="content">
-                    <asp:GridView ID="messageAnnouncementGridView" runat="server"></asp:GridView>
-				</div>
-				<div class="title">
-                    <asp:Label ID="Label4" runat="server" Text="政策法规" Font-Size="Medium"></asp:Label></div>
-				<div class="content">
-                    <asp:GridView ID="policiesAndRegulationsGridView" runat="server"></asp:GridView>
-				</div>
-				<div class="title">
-                    <asp:Label ID="Label5" runat="server" Text="收费项目" Font-Size="Medium"></asp:Label></div>
-				<div class="content">
-                    <asp:GridView ID="chargesPublicityGridView" runat="server"></asp:GridView>
-				</div>
-				<div class="title">
-                    <asp:Label ID="Label6" runat="server" Text="学分制规定和公示" Font-Size="Medium"></asp:Label></div>
-				<div class="content">
-                    <asp:GridView ID="creditSystemRulesAndPublicityGridView" runat="server"></asp:GridView>
-				</div>
+				
 			</div>
 			<div class="clear"></div>
 		</div>
