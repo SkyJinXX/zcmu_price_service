@@ -4,12 +4,24 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using System.Data.SqlClient;
+using System.Configuration;
+using System.Data;
 
 public partial class home : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
+        SqlConnection objConnection = new SqlConnection();
+        objConnection.ConnectionString = ConfigurationManager.ConnectionStrings["ConStr"].ToString();
+        objConnection.Open();
 
+        String SelectSql = "select title,datetime from announcement";
+        SqlDataAdapter da = new SqlDataAdapter(SelectSql, objConnection);
+        DataSet ds = new DataSet();
+        da.Fill(ds);
+        messageAnnouncementGridView.DataSource = ds;
+        messageAnnouncementGridView.DataBind();
     }
 
     protected void homePage_Click(object sender, EventArgs e)

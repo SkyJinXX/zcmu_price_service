@@ -94,7 +94,21 @@
 				<div class="title">
                     <asp:Label ID="Label3" runat="server" Text="信息公告" Font-Size="Medium"></asp:Label></div>
 				<div class="content">
-                    <asp:GridView ID="messageAnnouncementGridView" runat="server"></asp:GridView>
+                    <asp:GridView ID="messageAnnouncementGridView" Width="100%" runat="server" AutoGenerateColumns="False">
+                        <Columns>
+                            <asp:BoundField DataField="title" HeaderText="公告标题">
+                                <FooterStyle HorizontalAlign="Center" />
+                                <HeaderStyle HorizontalAlign="Center" />
+                                <ItemStyle HorizontalAlign="Center" />
+                            </asp:BoundField>
+                            <asp:BoundField DataField="datetime" HeaderText="发布时间">
+                                <FooterStyle HorizontalAlign="Center" />
+                                <HeaderStyle HorizontalAlign="Center" />
+                                <ItemStyle HorizontalAlign="Center" />
+                            </asp:BoundField>
+                        </Columns>
+                        <RowStyle HorizontalAlign="Center" />
+                    </asp:GridView>
 				</div>
 				<div class="title">
                     <asp:Label ID="Label4" runat="server" Text="政策法规" Font-Size="Medium"></asp:Label></div>
