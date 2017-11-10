@@ -106,6 +106,11 @@
                                 <HeaderStyle HorizontalAlign="Center" />
                                 <ItemStyle HorizontalAlign="Center" />
                             </asp:BoundField>
+                            <asp:TemplateField ShowHeader="False">
+                                <ItemTemplate>
+                                    <asp:LinkButton ID="LinkButton1" runat="server" CausesValidation="false" CommandName="" OnClick="LinkButton1_Click" Text="浏览"></asp:LinkButton>
+                                </ItemTemplate>
+                            </asp:TemplateField>
                         </Columns>
                         <RowStyle HorizontalAlign="Center" />
                     </asp:GridView>
@@ -113,19 +118,51 @@
 				<div class="title">
                     <asp:Label ID="Label4" runat="server" Text="政策法规" Font-Size="Medium"></asp:Label></div>
 				<div class="content">
-                    <asp:GridView ID="policiesAndRegulationsGridView" runat="server"></asp:GridView>
+                    <asp:GridView ID="policiesAndRegulationsGridView" runat="server" AutoGenerateColumns="False" Width="663px">
+                        <Columns>
+                            <asp:BoundField DataField="title" HeaderText="公告标题" />
+                            <asp:BoundField DataField="datetime" HeaderText="发布时间" />
+                            <asp:TemplateField ShowHeader="False">
+                                <ItemTemplate>
+                                    <asp:LinkButton ID="LinkButton2" runat="server" CausesValidation="false" CommandName="" OnClick="LinkButton1_Click1" Text="浏览"></asp:LinkButton>
+                                </ItemTemplate>
+                            </asp:TemplateField>
+                        </Columns>
+                    </asp:GridView>
 				</div>
 				<div class="title">
                     <asp:Label ID="Label5" runat="server" Text="收费项目" Font-Size="Medium"></asp:Label></div>
 				<div class="content">
-                    <asp:GridView ID="chargesPublicityGridView" runat="server"></asp:GridView>
+                    <asp:GridView ID="chargesPublicityGridView" runat="server" AutoGenerateColumns="False" Width="605px">
+                        <Columns>
+                            <asp:BoundField DataField="title" HeaderText="公告标题" />
+                            <asp:BoundField DataField="datetime" HeaderText="发布时间" />
+                            <asp:TemplateField ShowHeader="False">
+                                <ItemTemplate>
+                                    <asp:LinkButton ID="LinkButton1" runat="server" CausesValidation="false" CommandName="" Text="浏览"></asp:LinkButton>
+                                </ItemTemplate>
+                            </asp:TemplateField>
+                        </Columns>
+                    </asp:GridView>
 				</div>
 				<div class="title">
                     <asp:Label ID="Label6" runat="server" Text="学分制规定和公示" Font-Size="Medium"></asp:Label></div>
 				<div class="content">
-                    <asp:GridView ID="creditSystemRulesAndPublicityGridView" runat="server"></asp:GridView>
+                    <asp:GridView ID="creditSystemRulesAndPublicityGridView" runat="server" AutoGenerateColumns="False" Width="651px">
+                        <Columns>
+                            <asp:BoundField DataField="title" HeaderText="公告标题" />
+                            <asp:BoundField DataField="datetime" HeaderText="发布时间" />
+                            <asp:TemplateField ShowHeader="False">
+                                <ItemTemplate>
+                                    <asp:LinkButton ID="LinkButton1" runat="server" CausesValidation="false" CommandName="" Text="浏览"></asp:LinkButton>
+                                </ItemTemplate>
+                            </asp:TemplateField>
+                        </Columns>
+                    </asp:GridView>
 				</div>
 			</div>
+			<asp:LinkButton ID="LinkButton1" runat="server">LinkButton</asp:LinkButton>
+            <asp:LinkButton ID="LinkButton2" runat="server">LinkButton</asp:LinkButton>
 			<div class="clear"></div>
 		</div>
 		<div id="footer">
