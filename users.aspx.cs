@@ -139,8 +139,8 @@ public partial class users : System.Web.UI.Page
         {
             Response.Write("<script>alert('请选择文件')</script>");
         }
-        String r = GetWordContent(newFileName);
-        String SqlStr = "insert into announcement values ('" + TextBox1.Text + "','" +r+ "','"+t+"', '"
+        
+        String SqlStr = "insert into announcement values ('" + TextBox1.Text + "','" + "','"+t+"', '"
                             + (String)DropDownList1.SelectedValue + "')";
         SqlCommand cmd = new SqlCommand(SqlStr, objConnection);
         cmd.CommandText = SqlStr;
