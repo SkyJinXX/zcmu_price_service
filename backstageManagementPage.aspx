@@ -16,32 +16,32 @@
 			<ul>
 				<li>
                     <a>
-                        <asp:Button ID="homePage" CssClass="nav_button" runat="server" Text="首页" />
+                        <asp:Button ID="homePage" CssClass="nav_button" runat="server" Text="首页" OnClick="homePage_Click" />
 					</a>
 				</li>
 				<li>
 					<a>
-                        <asp:Button ID="message_announcement" CssClass="nav_button" runat="server" Text="信息公告"/>
+                        <asp:Button ID="message_announcement" CssClass="nav_button" runat="server" Text="信息公告" OnClick="message_announcement_Click"/>
 					</a>
 				</li>
 				<li>
                     <a>
-                        <asp:Button ID="policies_and_regulations" CssClass="nav_button" runat="server" Text="政策法规"  />
+                        <asp:Button ID="policies_and_regulations" CssClass="nav_button" runat="server" Text="政策法规" OnClick="policies_and_regulations_Click"  />
                     </a>
 				</li>
 				<li>
 					<a>
-                        <asp:Button ID="charges_publicity" CssClass="nav_button" runat="server" Text="收费项目公示"  />
+                        <asp:Button ID="charges_publicity" CssClass="nav_button" runat="server" Text="收费项目公示" OnClick="charges_publicity_Click"  />
 					</a>
 				</li>
 				<li>
 					<a>
-                        <asp:Button ID="credit_system_rules_and_publicity" CssClass="nav_button" runat="server" Text="学分制规定和公示"  />
+                        <asp:Button ID="credit_system_rules_and_publicity" CssClass="nav_button" runat="server" Text="学分制规定和公示" OnClick="credit_system_rules_and_publicity_Click"  />
 					</a>
 				</li>
 				<li>
 					<a>
-                        <asp:Button ID="backstage_management" CssClass="nav_button" runat="server" Text="后台管理"  />
+                        <asp:Button ID="backstage_management" CssClass="nav_button" runat="server" Text="后台管理" OnClick="backstage_management_Click"  />
 					</a>
 				</li>
 			</ul>
