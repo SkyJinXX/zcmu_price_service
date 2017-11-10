@@ -1,2 +1,61 @@
 ﻿body {
 }
+
+#login_interface {
+    width: 80%;
+    height: auto;
+    margin: auto;
+    padding-top: 20px;
+    padding-bottom: 40px;
+}
+
+#login {
+    width: 350px;
+    min-height:230px;
+    height: auto;
+    text-align: center;
+    margin: auto;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border: 2px solid #7B68EE;
+    border-radius: 10px;
+}
+
+#login_form {
+    text-align:center;
+    margin:auto;
+}
+
+#login_form tr th {
+    height:70px;
+    text-align: center;
+}
+
+.textbox {
+    width: 200px;
+    height: 30px;
+    border: 1px solid #7B68EE;
+    border-radius: 5px;
+}
+
+#login_button {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    outline: 0;
+    background-color: white;
+    border: 1px solid goldenrod;
+    padding: 10px 15px;
+    color: goldenrod;
+    border-radius: 5px;
+    width: 250px;
+    cursor: pointer;
+    font-size: 18px;
+    -webkit-transition-duration: 0.25s;
+    transition-duration: 0.25s;
+}
+
+#login_button:hover {
+    background-color:burlywood;
+    color:white;
+}

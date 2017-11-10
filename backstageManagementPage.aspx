@@ -6,12 +6,12 @@
 <head runat="server">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <title></title>
-    <link href="css/messageAnnouncementPage.css" type="text/css" rel="stylesheet" />
+    <link href="css/backstageManagement.css" type="text/css" rel="stylesheet" />
     <link href="css/userpage_header_footer.css" type="text/css" rel="stylesheet" />
 </head>
 <body>
     <form id="form1" runat="server">
-    <div id="top"></div>
+        <div id="top"></div>
 		<div id="nav">
 			<ul>
 				<li>
@@ -46,18 +46,44 @@
 				</li>
 			</ul>
 		</div>
-        <div>
-            
-    <div>
-     用户名：
-        <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
-        <br/>
-       密码：
-        <asp:TextBox ID="TextBox2" runat="server" type="password"></asp:TextBox>
-        <br />
-        <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="登录" />
-    </div>
+        <div id="login_interface">
+
+            <div id="login">
+                <table id="login_form">
+                    <tr>
+                        <th  colspan="2">
+                            <asp:Label ID="Label1" runat="server" Text="登录(Login)" Font-Size="X-Large"></asp:Label>
+                        </th>
+                    </tr>
+                    <tr>
+                        <th>
+                            <asp:Label ID="Label2" runat="server" Text="请输入用户名:"></asp:Label>
+                        </th>
+                        <th>
+                            <asp:TextBox ID="TextBox1" CssClass="textbox" runat="server"></asp:TextBox>
+                        </th>
+                    </tr>
+                    <tr>
+                        <th>
+                            <asp:Label ID="Label3" runat="server" Text="请输入密码:"></asp:Label>
+                        </th>
+                        <th>
+                            <asp:TextBox ID="TextBox2" CssClass="textbox" runat="server" type="password"></asp:TextBox>
+                        </th>
+                    </tr>
+                    <tr>
+                        <th  colspan="2">
+                            <asp:Button ID="login_button" runat="server" OnClick="login_button_Click" Text="登录" />
+                        </th>
+                    </tr>
+                </table>
+                
+                <br />
+                
+                <br />
+                
             </div>
+        </div>
 		<div id="footer">
             <div id="footer_content">
             </div>

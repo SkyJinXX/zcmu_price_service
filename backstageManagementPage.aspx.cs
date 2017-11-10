@@ -15,7 +15,7 @@ public partial class backstageManagement : System.Web.UI.Page
         objConnection.ConnectionString = ConfigurationManager.ConnectionStrings["ConStr"].ToString();
     }
 
-    protected void Button1_Click(object sender, EventArgs e)
+    protected void login_button_Click(object sender, EventArgs e)
     {
         try
         {
