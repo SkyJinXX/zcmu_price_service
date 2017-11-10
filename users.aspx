@@ -38,9 +38,10 @@
                         <th>
                             <asp:DropDownList ID="DropDownList1" CssClass="box" runat="server" Width="100px">
                                 <asp:ListItem> </asp:ListItem>
-                                <asp:ListItem Value="1">政策法规</asp:ListItem>
-                                <asp:ListItem Value="2">收费项目公示</asp:ListItem>
-                                <asp:ListItem Value="3">学分制规定和公示</asp:ListItem>
+                                 <asp:ListItem Value="1">信息公告</asp:ListItem>
+                                <asp:ListItem Value="2">政策法规</asp:ListItem>
+                                <asp:ListItem Value="3">收费项目公示</asp:ListItem>
+                                <asp:ListItem Value="4">学分制规定和公示</asp:ListItem>
                             </asp:DropDownList>
                         </th>
                         <th>

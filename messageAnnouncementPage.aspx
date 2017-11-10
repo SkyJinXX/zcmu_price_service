@@ -91,6 +91,26 @@
 				</div>
 			</div>
 			<div id="main">
+                <asp:GridView ID="messageAnnouncementGridView" Width="100%" runat="server" AutoGenerateColumns="False">
+                        <Columns>
+                            <asp:BoundField DataField="title" HeaderText="公告标题">
+                                <FooterStyle HorizontalAlign="Center" />
+                                <HeaderStyle HorizontalAlign="Center" />
+                                <ItemStyle HorizontalAlign="Center" />
+                            </asp:BoundField>
+                            <asp:BoundField DataField="datetime" HeaderText="发布时间">
+                                <FooterStyle HorizontalAlign="Center" />
+                                <HeaderStyle HorizontalAlign="Center" />
+                                <ItemStyle HorizontalAlign="Center" />
+                            </asp:BoundField>
+                            <asp:TemplateField ShowHeader="False">
+                                <ItemTemplate>
+                                    <asp:LinkButton ID="LinkButton1" runat="server" CausesValidation="false" CommandName=""  Text="浏览" OnClick="LinkButton1_Click"></asp:LinkButton>
+                                </ItemTemplate>
+                            </asp:TemplateField>
+                        </Columns>
+                        <RowStyle HorizontalAlign="Center" />
+                    </asp:GridView>
 				
 			</div>
 			<div class="clear"></div>

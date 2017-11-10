@@ -91,7 +91,17 @@
 				</div>
 			</div>
 			<div id="main">
-				
+				<asp:GridView ID="policiesAndRegulationsGridView" runat="server" AutoGenerateColumns="False" Width="663px">
+                        <Columns>
+                            <asp:BoundField DataField="title" HeaderText="公告标题" />
+                            <asp:BoundField DataField="datetime" HeaderText="发布时间" />
+                            <asp:TemplateField ShowHeader="False">
+                                <ItemTemplate>
+                                    <asp:LinkButton ID="LinkButton2" runat="server" CausesValidation="false" CommandName=""  Text="浏览" OnClick="LinkButton2_Click"></asp:LinkButton>
+                                </ItemTemplate>
+                            </asp:TemplateField>
+                        </Columns>
+                    </asp:GridView>
 			</div>
 			<div class="clear"></div>
 		</div>
