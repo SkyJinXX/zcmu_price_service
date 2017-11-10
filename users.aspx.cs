@@ -71,7 +71,7 @@ public partial class users : System.Web.UI.Page
     }
 
 
-    string t= DateTime.Now.ToString();
+    
     protected void Button1_Click(object sender, EventArgs e)
     {
         objConnection.ConnectionString = ConfigurationManager.ConnectionStrings["ConStr"].ToString();
@@ -109,20 +109,14 @@ public partial class users : System.Web.UI.Page
                     {
                         FileUpload1.SaveAs(newFileName);
                         HttpContext.Current.Response.Write("<script>alert('文件已成功上传。');</script>");
-                        //HttpContext.Current.Response.Write("<script>alert('数据插入成功。');</script>");
-                        /*将word存入数据库
-                        StreamReader sr = new StreamReader(newFileName);
-                        string line = null;
-                        while ((line = sr.ReadLine()) != null)
-                        {
-                            string[] spilt = line.Split(new char[] { ' ' });
-                            String sql2 = string.Format("insert into announcement(article) values('{0}' )"
-                                   , spilt[0]);
-                            aa.CommandText = sql2;
-                            aa.ExecuteNonQuery();
-                            
-                        }
-                        */
+                        String rr = GetWordContent(newFileName);
+                        string t = DateTime.Now.ToString();
+                        String SqlStr = "insert into announcement values ('" + TextBox1.Text + "','" +rr+ "','" + t + "', '"
+                           + (String)DropDownList1.SelectedValue + "')";
+                        SqlCommand cmd = new SqlCommand(SqlStr, objConnection);
+                        cmd.CommandText = SqlStr;
+                        cmd.ExecuteScalar();
+                        objConnection.Close();
                     }
                 }
                 catch {
@@ -140,11 +134,6 @@ public partial class users : System.Web.UI.Page
             Response.Write("<script>alert('请选择文件')</script>");
         }
         
-        String SqlStr = "insert into announcement values ('" + TextBox1.Text + "','" + "','"+t+"', '"
-                            + (String)DropDownList1.SelectedValue + "')";
-        SqlCommand cmd = new SqlCommand(SqlStr, objConnection);
-        cmd.CommandText = SqlStr;
-        cmd.ExecuteScalar();
-        objConnection.Close();
+       
     }
 }
