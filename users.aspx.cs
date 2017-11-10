@@ -4,9 +4,11 @@ using System.Configuration;
 using System.Data.SqlClient;
 using System.IO;
 using System.Linq;
+using System.Text;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using Word = Microsoft.Office.Interop.Word;
 
 public partial class users : System.Web.UI.Page
 {
@@ -21,6 +23,55 @@ public partial class users : System.Web.UI.Page
         objConnection.ConnectionString = ConfigurationManager.ConnectionStrings["ConStr"].ToString();
     }
 
+    /// <summary>
+    /// 读取 word文档 返回内容
+    /// </summary>
+    /// <param name="path"></param>
+    /// <returns></returns>
+    public static string GetWordContent(string path)
+    {
+        try
+        {
+            Word.Application app = new Microsoft.Office.Interop.Word.Application();
+            Type wordType = app.GetType();
+            Word.Document doc = null;
+            object unknow = Type.Missing;
+            app.Visible = false;
+            object file = path;
+            doc = app.Documents.Open(ref file,
+                ref unknow, ref unknow, ref unknow, ref unknow,
+                ref unknow, ref unknow, ref unknow, ref unknow,
+                ref unknow, ref unknow, ref unknow, ref unknow,
+                ref unknow, ref unknow, ref unknow);
+            int count = doc.Paragraphs.Count;
+            StringBuilder sb = new StringBuilder();
+            for (int i = 1; i <= count; i++)
+            {
+
+                sb.Append(doc.Paragraphs[i].Range.Text.Trim());
+            }
+
+            doc.Close(ref unknow, ref unknow, ref unknow);
+            wordType.InvokeMember("Quit", System.Reflection.BindingFlags.InvokeMethod, null, app, null);
+            doc = null;
+            app = null;
+            //垃圾回收
+            GC.Collect();
+            GC.WaitForPendingFinalizers();
+            string temp = sb.ToString();
+            //if (temp.Length > 200)
+            //    return temp.Substring(0, 200);
+            //else
+            return temp;
+        }
+        catch
+        {
+            return "";
+        }
+    }
+
+
+    string t= DateTime.Now.ToString();
     protected void Button1_Click(object sender, EventArgs e)
     {
         objConnection.ConnectionString = ConfigurationManager.ConnectionStrings["ConStr"].ToString();
@@ -58,15 +109,6 @@ public partial class users : System.Web.UI.Page
                     {
                         FileUpload1.SaveAs(newFileName);
                         HttpContext.Current.Response.Write("<script>alert('文件已成功上传。');</script>");
-                        objConnection.ConnectionString = ConfigurationManager.ConnectionStrings["ConStr"].ToString();
-                        objConnection.Open();
-                        String sql = "";
-                        SqlCommand aa = new SqlCommand(sql, objConnection);
-                        aa.CommandText = "insert into announcement values ('" + TextBox1.Text + "','"+"','"+"', '"
-                            +(String)DropDownList1.SelectedValue + "')";
-                        aa.ExecuteNonQuery();
-                        objConnection.Close();
-
                         //HttpContext.Current.Response.Write("<script>alert('数据插入成功。');</script>");
                         /*将word存入数据库
                         StreamReader sr = new StreamReader(newFileName);
@@ -86,6 +128,7 @@ public partial class users : System.Web.UI.Page
                 catch {
                    
                 }
+                String s = GetWordContent(newFileName);
             }
             else
             {
@@ -96,6 +139,12 @@ public partial class users : System.Web.UI.Page
         {
             Response.Write("<script>alert('请选择文件')</script>");
         }
+        String r = GetWordContent(newFileName);
+        String SqlStr = "insert into announcement values ('" + TextBox1.Text + "','" +r+ "','"+t+"', '"
+                            + (String)DropDownList1.SelectedValue + "')";
+        SqlCommand cmd = new SqlCommand(SqlStr, objConnection);
+        cmd.CommandText = SqlStr;
+        cmd.ExecuteScalar();
         objConnection.Close();
     }
 }
