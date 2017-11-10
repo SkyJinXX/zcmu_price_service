@@ -16,12 +16,13 @@
         上传word文档
         <asp:FileUpload ID="FileUpload1" runat="server" Width="80px" EnableTheming="True" />
         <br/>
-        <select>
-            <option value ="1">政策法规</option>
-            <option value ="2">收费项目公示</option>
-            <option value="3">学分值规定和指定</option>
-       </select>
-        <asp:Button ID="Button1" runat="server" Text="上传" />
+        <asp:DropDownList ID="DropDownList1" runat="server" Width="100px">
+                        <asp:ListItem> </asp:ListItem>
+                        <asp:ListItem Value="1">政策法规</asp:ListItem>
+                        <asp:ListItem Value="2">收费项目公示</asp:ListItem>
+                        <asp:ListItem Value="3">学分制规定和公示</asp:ListItem>
+                    </asp:DropDownList>
+        <asp:Button ID="Button1" runat="server" Text="上传" OnClick="Button1_Click" />
     </div>
     </form>
 </body>

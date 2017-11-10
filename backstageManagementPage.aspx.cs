@@ -39,6 +39,7 @@ public partial class backstageManagement : System.Web.UI.Page
                 if (st == st1)
                 {
                     Response.Write("<script>alert('登陆成功');window.location.href='users.aspx'</script>");
+                    Session["username"] = TextBox1.Text;
                 }
                 else
                 {
