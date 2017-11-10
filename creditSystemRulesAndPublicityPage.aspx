@@ -96,8 +96,15 @@
 			<div class="clear"></div>
 		</div>
 		<div id="footer">
-            <div id="footer_content">
-
+            <div id="footer_content1">
+                <p>
+                    Copyright ©1959-2017 浙江中医药大学 
+                </p>
+            </div>
+            <div id="footer_content2">
+                <p>
+                    地址：浙江省杭州市滨江区滨文路548号（310053）校办电话：0571-86633077 0571-86633177 传真：0571-86613500 
+                </p>
             </div>
 		</div>
     </form>
