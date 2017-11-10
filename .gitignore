@@ -2,3 +2,10 @@
 Web.config
 Web.config
 Web.config
+*.config
+*.config
+.vs/config/applicationhost.config
+*.config
+Web.config
+Web.config
+Web.config
